@@ -4,6 +4,8 @@ import Show from "../../components/Show/Show";
 
 import styles from "./Home.module.css";
 
+var list = [];
+
 function Home() {
   const [shows, setShows] = useState([]);
 
@@ -23,6 +25,9 @@ function Home() {
   useEffect(() => {
     fetchShows();
   }, [fetchShows]);
+
+  list = shows;
+  console.log(list);
 
   return (
     <div className={styles.main}>
@@ -50,3 +55,4 @@ function Home() {
 }
 
 export default Home;
+export {list};
