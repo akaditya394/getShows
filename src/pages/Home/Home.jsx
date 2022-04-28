@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useCallback } from "react";
 import Header from "../../components/Header/Header";
 import Show from "../../components/Show/Show";
+import Footer from "../../components/Footer/Footer";
 
 import styles from "./Home.module.css";
 
@@ -50,6 +51,7 @@ function Home() {
           );
         })}
       </div>
+      <Footer />
     </div>
   );
 }

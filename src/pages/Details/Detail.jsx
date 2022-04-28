@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import Header from "../../components/Header/Header";
 import { list } from "../../pages/Home/Home";
 import ShowDetails from "../../components/ShowDetails/ShowDetails";
+import Footer from "../../components/Footer/Footer";
 import styles from "./Detail.module.css";
 
 function Detail() {
@@ -23,6 +24,7 @@ function Detail() {
         />
         <p>{list[position].show.name}</p>
       </div>
+      <Footer />
     </>
   );
 }
