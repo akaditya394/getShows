@@ -1,0 +1,14 @@
+.main{
+    min-width: 100vw;
+    min-height: 100vh;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.showList{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
