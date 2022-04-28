@@ -1,15 +1,15 @@
 .main {
+  text-align: center;
   font-family: "Montserrat", sans-serif;
-  height: 20rem;
-  width: 80%;
+  height: 23rem;
+  width: 75%;
   display: flex;
   justify-content: space-around;
   align-items: center;
   margin: 1rem;
   padding: 1rem;
-  border: 1px solid black;
   border-radius: 1rem;
-  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  box-shadow: rgba(0, 0, 0, 0.3) 1.95px 1.95px 2.6px;
 }
 
 .showImg {
@@ -26,9 +26,41 @@
   align-items: center;
 }
 
+.name{
+  font-family: "Ubuntu", sans-serif;
+}
+
+.status, .genre{
+  margin: 1rem;
+}
+
 .footer {
+  gap: 1rem;
   width: 100%;
   display: flex;
   justify-content: space-around;
   align-items: center;
+}
+
+
+@media (max-width:1024px){
+
+  .main{
+    width: auto;
+    gap: 2rem;
+    padding:1rem;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: auto;
+  }
+  .footer{
+    text-align: center;
+    flex-wrap: wrap;
+  }
+  .showImg{
+    width: 100%;
+    padding:0;
+  }
+
 }

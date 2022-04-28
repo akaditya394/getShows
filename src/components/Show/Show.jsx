@@ -10,12 +10,15 @@ function Show(props) {
         <img src={props.imgUrl} alt={props.name} />
       </div>
       <div className={styles.showGlimpse}>
-        <div className={styles.name}>{props.name}</div>
+        <div className={styles.name}>
+          <h1>{props.name}</h1>
+        </div>
+        <div className={styles.status}>{props.status}</div>
         <div className={styles.genre}>{props.genre}</div>
         <div className={styles.footer}>
-          <div>{props.rating}</div>
+          <div>{props.language}</div>
+          <div>Rating : {props.rating ? props.rating : <p>N/A</p>}</div>
           <div>{props.network}</div>
-          <div>{props.runtime}</div>
           <div>
             <Button>Open</Button>
           </div>
