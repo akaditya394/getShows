@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styles from "./Show.module.css";
 
 import Button from "../Button/Button";
@@ -29,9 +30,11 @@ function Show(props) {
           <div>Rating : {props.rating ? props.rating : <p>N/A</p>}</div>
           <div>{props.network}</div>
           <div>
-            <Button>
-              <FontAwesomeIcon icon={faArrowRightFromBracket} />
-            </Button>
+            <Link to={`/details/${props.index}`}>
+              <Button>
+                <FontAwesomeIcon icon={faArrowRightFromBracket} />
+              </Button>
+            </Link>
           </div>
         </div>
       </div>

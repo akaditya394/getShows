@@ -28,10 +28,11 @@ function Home() {
     <div className={styles.main}>
       <Header />
       <div className={styles.showList}>
-        {shows.map((item) => {
+        {shows.map((item, index) => {
           return (
             <Show
-              key={item.show.id}
+              key={index}
+              index={index}
               imgUrl={item.show.image.medium}
               name={item.show.name}
               genre={item.show.genres}
@@ -43,17 +44,6 @@ function Home() {
             />
           );
         })}
-        {/* <Show
-          imgUrl=""
-          name="Name"
-          genre="Genre"
-          rating="5.4"
-          network="Channel"
-          runtime="60"
-        />
-        <Show />
-        <Show />
-        <Show /> */}
       </div>
     </div>
   );
