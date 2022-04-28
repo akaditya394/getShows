@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "./ShowDetails.module.css";
 import { list } from "../../pages/Home/Home";
 import { useParams } from "react-router-dom";
@@ -6,9 +6,10 @@ import { useParams } from "react-router-dom";
 function ShowDetails(props) {
   const { position } = useParams();
 
-  console.log(position);
-  document.getElementsByClassName(styles.summary)[0].innerHTML =
-    list[position].show.summary;
+  useEffect(() => {
+    document.getElementsByClassName(styles.summary)[0].innerHTML =
+      list[position].show.summary;
+  }, [position]);
 
   return (
     <div className={styles.main}>
